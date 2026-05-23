@@ -5,13 +5,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/RomanovCaesar/cproxy/adapter/outbound"
+	C "github.com/RomanovCaesar/cproxy/constant"
 	"github.com/docker/docker/api/types/container"
-	"github.com/metacubex/mihomo/adapter/outbound"
-	C "github.com/metacubex/mihomo/constant"
 	"github.com/stretchr/testify/require"
 )
 
-func TestMihomo_SnellObfsHTTP(t *testing.T) {
+func TestCProxy_SnellObfsHTTP(t *testing.T) {
 	cfg := &container.Config{
 		Image:        ImageSnell,
 		ExposedPorts: defaultExposedPorts,
@@ -44,7 +44,7 @@ func TestMihomo_SnellObfsHTTP(t *testing.T) {
 	testSuit(t, proxy)
 }
 
-func TestMihomo_SnellObfsTLS(t *testing.T) {
+func TestCProxy_SnellObfsTLS(t *testing.T) {
 	cfg := &container.Config{
 		Image:        ImageSnell,
 		ExposedPorts: defaultExposedPorts,
@@ -77,7 +77,7 @@ func TestMihomo_SnellObfsTLS(t *testing.T) {
 	testSuit(t, proxy)
 }
 
-func TestMihomo_Snell(t *testing.T) {
+func TestCProxy_Snell(t *testing.T) {
 	cfg := &container.Config{
 		Image:        ImageSnell,
 		ExposedPorts: defaultExposedPorts,
@@ -107,7 +107,7 @@ func TestMihomo_Snell(t *testing.T) {
 	testSuit(t, proxy)
 }
 
-func TestMihomo_Snellv3(t *testing.T) {
+func TestCProxy_Snellv3(t *testing.T) {
 	cfg := &container.Config{
 		Image:        ImageSnell,
 		ExposedPorts: defaultExposedPorts,

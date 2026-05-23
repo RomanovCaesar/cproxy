@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/component/dialer"
-	"github.com/metacubex/mihomo/listener/inner"
+	"github.com/RomanovCaesar/cproxy/component/ca"
+	"github.com/RomanovCaesar/cproxy/component/dialer"
+	"github.com/RomanovCaesar/cproxy/listener/inner"
 
 	"github.com/metacubex/http"
 )

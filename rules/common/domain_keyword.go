@@ -3,7 +3,7 @@ package common
 import (
 	"strings"
 
-	C "github.com/metacubex/mihomo/constant"
+	C "github.com/RomanovCaesar/cproxy/constant"
 )
 
 type DomainKeyword struct {

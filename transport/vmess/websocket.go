@@ -16,11 +16,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/mihomo/common/buf"
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/component/ech"
-	tlsC "github.com/metacubex/mihomo/component/tls"
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/common/buf"
+	N "github.com/RomanovCaesar/cproxy/common/net"
+	"github.com/RomanovCaesar/cproxy/component/ech"
+	tlsC "github.com/RomanovCaesar/cproxy/component/tls"
+	"github.com/RomanovCaesar/cproxy/log"
 
 	"github.com/gobwas/ws"
 	"github.com/gobwas/ws/wsutil"

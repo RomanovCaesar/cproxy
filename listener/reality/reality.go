@@ -10,11 +10,11 @@ import (
 	"runtime/debug"
 	"time"
 
-	N "github.com/metacubex/mihomo/common/net"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/listener/inner"
-	"github.com/metacubex/mihomo/log"
-	"github.com/metacubex/mihomo/ntp"
+	N "github.com/RomanovCaesar/cproxy/common/net"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/listener/inner"
+	"github.com/RomanovCaesar/cproxy/log"
+	"github.com/RomanovCaesar/cproxy/ntp"
 
 	utls "github.com/metacubex/utls"
 )

@@ -16,12 +16,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/metacubex/mihomo/common/buf"
-	"github.com/metacubex/mihomo/common/httputils"
-	"github.com/metacubex/mihomo/common/pool"
-	tlsC "github.com/metacubex/mihomo/component/tls"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/transport/vmess"
+	"github.com/RomanovCaesar/cproxy/common/buf"
+	"github.com/RomanovCaesar/cproxy/common/httputils"
+	"github.com/RomanovCaesar/cproxy/common/pool"
+	tlsC "github.com/RomanovCaesar/cproxy/component/tls"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/transport/vmess"
 
 	"github.com/metacubex/http"
 )

@@ -5,14 +5,14 @@ import (
 	"net"
 	"strings"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	N "github.com/metacubex/mihomo/common/net"
-	C "github.com/metacubex/mihomo/constant"
-	LC "github.com/metacubex/mihomo/listener/config"
-	"github.com/metacubex/mihomo/listener/sing"
-	"github.com/metacubex/mihomo/transport/shadowsocks/core"
-	obfs "github.com/metacubex/mihomo/transport/simple-obfs"
-	"github.com/metacubex/mihomo/transport/socks5"
+	"github.com/RomanovCaesar/cproxy/adapter/inbound"
+	N "github.com/RomanovCaesar/cproxy/common/net"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	LC "github.com/RomanovCaesar/cproxy/listener/config"
+	"github.com/RomanovCaesar/cproxy/listener/sing"
+	"github.com/RomanovCaesar/cproxy/transport/shadowsocks/core"
+	obfs "github.com/RomanovCaesar/cproxy/transport/simple-obfs"
+	"github.com/RomanovCaesar/cproxy/transport/socks5"
 )
 
 type Listener struct {

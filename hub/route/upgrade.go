@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/metacubex/mihomo/component/updater"
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/component/updater"
+	"github.com/RomanovCaesar/cproxy/log"
 
 	"github.com/metacubex/chi"
 	"github.com/metacubex/chi/render"

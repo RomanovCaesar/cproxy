@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/component/pool"
-	"github.com/metacubex/mihomo/transport/shadowsocks/shadowaead"
+	"github.com/RomanovCaesar/cproxy/component/pool"
+	"github.com/RomanovCaesar/cproxy/transport/shadowsocks/shadowaead"
 )
 
 type Pool struct {
@@ -77,7 +77,7 @@ func (pc *PoolConn) Close() error {
 			return
 		}
 
-		// mihomo use SetReadDeadline to break bidirectional copy between client and server.
+		// cproxy use SetReadDeadline to break bidirectional copy between client and server.
 		// reset it before reuse connection to avoid io timeout error.
 		_ = pc.Snell.Conn.SetReadDeadline(time.Time{})
 		pc.Snell.reply = false

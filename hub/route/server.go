@@ -12,14 +12,14 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	"github.com/metacubex/mihomo/common/utils"
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/component/ech"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/log"
-	"github.com/metacubex/mihomo/ntp"
-	"github.com/metacubex/mihomo/tunnel/statistic"
+	"github.com/RomanovCaesar/cproxy/adapter/inbound"
+	"github.com/RomanovCaesar/cproxy/common/utils"
+	"github.com/RomanovCaesar/cproxy/component/ca"
+	"github.com/RomanovCaesar/cproxy/component/ech"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/log"
+	"github.com/RomanovCaesar/cproxy/ntp"
+	"github.com/RomanovCaesar/cproxy/tunnel/statistic"
 
 	"github.com/metacubex/chi"
 	"github.com/metacubex/chi/cors"
@@ -357,7 +357,7 @@ func authentication(secret string) func(http.Handler) http.Handler {
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
-	render.JSON(w, r, render.M{"hello": "mihomo"})
+	render.JSON(w, r, render.M{"hello": "cproxy"})
 }
 
 func traffic(w http.ResponseWriter, r *http.Request) {

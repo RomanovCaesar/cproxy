@@ -3,10 +3,10 @@ package provider
 import (
 	"fmt"
 
-	C "github.com/metacubex/mihomo/constant"
-	P "github.com/metacubex/mihomo/constant/provider"
-	"github.com/metacubex/mihomo/log"
-	"github.com/metacubex/mihomo/rules/common"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	P "github.com/RomanovCaesar/cproxy/constant/provider"
+	"github.com/RomanovCaesar/cproxy/log"
+	"github.com/RomanovCaesar/cproxy/rules/common"
 )
 
 type classicalStrategy struct {

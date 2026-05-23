@@ -8,10 +8,10 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/metacubex/mihomo/common/utils"
-	mihomoHttp "github.com/metacubex/mihomo/component/http"
-	"github.com/metacubex/mihomo/component/profile/cachefile"
-	P "github.com/metacubex/mihomo/constant/provider"
+	"github.com/RomanovCaesar/cproxy/common/utils"
+	cproxyHttp "github.com/RomanovCaesar/cproxy/component/http"
+	"github.com/RomanovCaesar/cproxy/component/profile/cachefile"
+	P "github.com/RomanovCaesar/cproxy/constant/provider"
 
 	"github.com/metacubex/http"
 )
@@ -136,7 +136,7 @@ func (h *HTTPVehicle) Read(ctx context.Context, oldHash utils.HashType) (buf []b
 			setIfNoneMatch = true
 		}
 	}
-	resp, err := mihomoHttp.HttpRequest(ctx, h.url, http.MethodGet, header, nil, mihomoHttp.WithSpecialProxy(h.proxy))
+	resp, err := cproxyHttp.HttpRequest(ctx, h.url, http.MethodGet, header, nil, cproxyHttp.WithSpecialProxy(h.proxy))
 	if err != nil {
 		return
 	}

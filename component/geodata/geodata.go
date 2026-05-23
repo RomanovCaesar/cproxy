@@ -3,8 +3,8 @@ package geodata
 import (
 	"fmt"
 
-	"github.com/metacubex/mihomo/component/geodata/router"
-	C "github.com/metacubex/mihomo/constant"
+	"github.com/RomanovCaesar/cproxy/component/geodata/router"
+	C "github.com/RomanovCaesar/cproxy/constant"
 )
 
 type loader struct {

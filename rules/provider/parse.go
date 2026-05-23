@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/metacubex/mihomo/common/structure"
-	"github.com/metacubex/mihomo/component/resource"
-	C "github.com/metacubex/mihomo/constant"
-	P "github.com/metacubex/mihomo/constant/provider"
-	"github.com/metacubex/mihomo/rules/common"
+	"github.com/RomanovCaesar/cproxy/common/structure"
+	"github.com/RomanovCaesar/cproxy/component/resource"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	P "github.com/RomanovCaesar/cproxy/constant/provider"
+	"github.com/RomanovCaesar/cproxy/rules/common"
 )
 
 type ruleProviderSchema struct {

@@ -6,11 +6,11 @@ import (
 	"net/netip"
 	"time"
 
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/common/pool"
-	"github.com/metacubex/mihomo/component/resolver"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/log"
+	N "github.com/RomanovCaesar/cproxy/common/net"
+	"github.com/RomanovCaesar/cproxy/common/pool"
+	"github.com/RomanovCaesar/cproxy/component/resolver"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/log"
 )
 
 type Dns struct {

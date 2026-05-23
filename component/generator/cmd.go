@@ -4,9 +4,9 @@ import (
 	"encoding/base64"
 	"fmt"
 
-	"github.com/metacubex/mihomo/component/ech"
-	"github.com/metacubex/mihomo/transport/sudoku"
-	"github.com/metacubex/mihomo/transport/vless/encryption"
+	"github.com/RomanovCaesar/cproxy/component/ech"
+	"github.com/RomanovCaesar/cproxy/transport/sudoku"
+	"github.com/RomanovCaesar/cproxy/transport/vless/encryption"
 
 	"github.com/gofrs/uuid/v5"
 )

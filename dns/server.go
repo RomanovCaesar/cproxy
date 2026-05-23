@@ -4,10 +4,10 @@ import (
 	"context"
 	"net"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	"github.com/metacubex/mihomo/common/sockopt"
-	"github.com/metacubex/mihomo/component/resolver"
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/adapter/inbound"
+	"github.com/RomanovCaesar/cproxy/common/sockopt"
+	"github.com/RomanovCaesar/cproxy/component/resolver"
+	"github.com/RomanovCaesar/cproxy/log"
 
 	D "github.com/miekg/dns"
 )

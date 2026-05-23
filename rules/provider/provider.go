@@ -9,12 +9,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/mihomo/common/pool"
-	"github.com/metacubex/mihomo/common/yaml"
-	"github.com/metacubex/mihomo/component/resource"
-	C "github.com/metacubex/mihomo/constant"
-	P "github.com/metacubex/mihomo/constant/provider"
-	"github.com/metacubex/mihomo/rules/common"
+	"github.com/RomanovCaesar/cproxy/common/pool"
+	"github.com/RomanovCaesar/cproxy/common/yaml"
+	"github.com/RomanovCaesar/cproxy/component/resource"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	P "github.com/RomanovCaesar/cproxy/constant/provider"
+	"github.com/RomanovCaesar/cproxy/rules/common"
 )
 
 var tunnel P.Tunnel

@@ -7,12 +7,12 @@ import (
 
 	"github.com/dlclark/regexp2"
 
-	"github.com/metacubex/mihomo/adapter/provider"
-	"github.com/metacubex/mihomo/common/structure"
-	"github.com/metacubex/mihomo/common/utils"
-	C "github.com/metacubex/mihomo/constant"
-	P "github.com/metacubex/mihomo/constant/provider"
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/adapter/provider"
+	"github.com/RomanovCaesar/cproxy/common/structure"
+	"github.com/RomanovCaesar/cproxy/common/utils"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	P "github.com/RomanovCaesar/cproxy/constant/provider"
+	"github.com/RomanovCaesar/cproxy/log"
 )
 
 var (

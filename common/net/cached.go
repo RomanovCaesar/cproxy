@@ -3,7 +3,7 @@ package net
 import (
 	"net"
 
-	"github.com/metacubex/mihomo/common/buf"
+	"github.com/RomanovCaesar/cproxy/common/buf"
 )
 
 var _ ExtendedConn = (*CachedConn)(nil)

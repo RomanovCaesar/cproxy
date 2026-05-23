@@ -6,11 +6,11 @@ import (
 	"strconv"
 	"time"
 
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/component/proxydialer"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/transport/anytls"
-	"github.com/metacubex/mihomo/transport/vmess"
+	N "github.com/RomanovCaesar/cproxy/common/net"
+	"github.com/RomanovCaesar/cproxy/component/proxydialer"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/transport/anytls"
+	"github.com/RomanovCaesar/cproxy/transport/vmess"
 
 	M "github.com/metacubex/sing/common/metadata"
 	"github.com/metacubex/sing/common/uot"

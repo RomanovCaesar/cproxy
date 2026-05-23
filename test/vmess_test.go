@@ -5,13 +5,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/RomanovCaesar/cproxy/adapter/outbound"
+	C "github.com/RomanovCaesar/cproxy/constant"
 	"github.com/docker/docker/api/types/container"
-	"github.com/metacubex/mihomo/adapter/outbound"
-	C "github.com/metacubex/mihomo/constant"
 	"github.com/stretchr/testify/require"
 )
 
-func TestMihomo_Vmess(t *testing.T) {
+func TestCProxy_Vmess(t *testing.T) {
 	configPath := C.Path.Resolve("vmess.json")
 
 	cfg := &container.Config{
@@ -44,7 +44,7 @@ func TestMihomo_Vmess(t *testing.T) {
 	testSuit(t, proxy)
 }
 
-func TestMihomo_VmessAuthenticatedLength(t *testing.T) {
+func TestCProxy_VmessAuthenticatedLength(t *testing.T) {
 	configPath := C.Path.Resolve("vmess.json")
 
 	cfg := &container.Config{
@@ -78,7 +78,7 @@ func TestMihomo_VmessAuthenticatedLength(t *testing.T) {
 	testSuit(t, proxy)
 }
 
-func TestMihomo_VmessPacketAddr(t *testing.T) {
+func TestCProxy_VmessPacketAddr(t *testing.T) {
 	configPath := C.Path.Resolve("vmess.json")
 
 	cfg := &container.Config{
@@ -112,7 +112,7 @@ func TestMihomo_VmessPacketAddr(t *testing.T) {
 	testSuit(t, proxy)
 }
 
-func TestMihomo_VmessTLS(t *testing.T) {
+func TestCProxy_VmessTLS(t *testing.T) {
 	cfg := &container.Config{
 		Image:        ImageVmess,
 		ExposedPorts: defaultExposedPorts,
@@ -149,7 +149,7 @@ func TestMihomo_VmessTLS(t *testing.T) {
 	testSuit(t, proxy)
 }
 
-func TestMihomo_VmessHTTP2(t *testing.T) {
+func TestCProxy_VmessHTTP2(t *testing.T) {
 	cfg := &container.Config{
 		Image:        ImageVmess,
 		ExposedPorts: defaultExposedPorts,
@@ -191,7 +191,7 @@ func TestMihomo_VmessHTTP2(t *testing.T) {
 	testSuit(t, proxy)
 }
 
-func TestMihomo_VmessHTTP(t *testing.T) {
+func TestCProxy_VmessHTTP(t *testing.T) {
 	cfg := &container.Config{
 		Image:        ImageVmess,
 		ExposedPorts: defaultExposedPorts,
@@ -241,7 +241,7 @@ func TestMihomo_VmessHTTP(t *testing.T) {
 	testSuit(t, proxy)
 }
 
-func TestMihomo_VmessWebsocket(t *testing.T) {
+func TestCProxy_VmessWebsocket(t *testing.T) {
 	cfg := &container.Config{
 		Image:        ImageVmess,
 		ExposedPorts: defaultExposedPorts,
@@ -274,7 +274,7 @@ func TestMihomo_VmessWebsocket(t *testing.T) {
 	testSuit(t, proxy)
 }
 
-func TestMihomo_VmessWebsocketTLS(t *testing.T) {
+func TestCProxy_VmessWebsocketTLS(t *testing.T) {
 	cfg := &container.Config{
 		Image:        ImageVmess,
 		ExposedPorts: defaultExposedPorts,
@@ -311,7 +311,7 @@ func TestMihomo_VmessWebsocketTLS(t *testing.T) {
 	testSuit(t, proxy)
 }
 
-func TestMihomo_VmessGrpc(t *testing.T) {
+func TestCProxy_VmessGrpc(t *testing.T) {
 	cfg := &container.Config{
 		Image:        ImageVmess,
 		ExposedPorts: defaultExposedPorts,
@@ -352,7 +352,7 @@ func TestMihomo_VmessGrpc(t *testing.T) {
 	testSuit(t, proxy)
 }
 
-func TestMihomo_VmessWebsocket0RTT(t *testing.T) {
+func TestCProxy_VmessWebsocket0RTT(t *testing.T) {
 	cfg := &container.Config{
 		Image:        ImageVmess,
 		ExposedPorts: defaultExposedPorts,
@@ -390,7 +390,7 @@ func TestMihomo_VmessWebsocket0RTT(t *testing.T) {
 	testSuit(t, proxy)
 }
 
-func TestMihomo_VmessWebsocketXray0RTT(t *testing.T) {
+func TestCProxy_VmessWebsocketXray0RTT(t *testing.T) {
 	cfg := &container.Config{
 		Image:        ImageXray,
 		ExposedPorts: defaultExposedPorts,

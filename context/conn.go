@@ -1,11 +1,11 @@
 package context
 
 import (
-	"github.com/metacubex/mihomo/common/utils"
+	"github.com/RomanovCaesar/cproxy/common/utils"
 	"net"
 
-	N "github.com/metacubex/mihomo/common/net"
-	C "github.com/metacubex/mihomo/constant"
+	N "github.com/RomanovCaesar/cproxy/common/net"
+	C "github.com/RomanovCaesar/cproxy/constant"
 
 	"github.com/gofrs/uuid/v5"
 )

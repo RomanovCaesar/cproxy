@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/RomanovCaesar/cproxy/transport/sudoku/crypto"
+	"github.com/RomanovCaesar/cproxy/transport/sudoku/obfs/sudoku"
 	"github.com/metacubex/edwards25519"
-	"github.com/metacubex/mihomo/transport/sudoku/crypto"
-	"github.com/metacubex/mihomo/transport/sudoku/obfs/sudoku"
 )
 
 func NewTable(key string, tableType string) *sudoku.Table {

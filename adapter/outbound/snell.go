@@ -6,11 +6,11 @@ import (
 	"net"
 	"strconv"
 
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/common/structure"
-	C "github.com/metacubex/mihomo/constant"
-	obfs "github.com/metacubex/mihomo/transport/simple-obfs"
-	"github.com/metacubex/mihomo/transport/snell"
+	N "github.com/RomanovCaesar/cproxy/common/net"
+	"github.com/RomanovCaesar/cproxy/common/structure"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	obfs "github.com/RomanovCaesar/cproxy/transport/simple-obfs"
+	"github.com/RomanovCaesar/cproxy/transport/snell"
 )
 
 type Snell struct {

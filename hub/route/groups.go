@@ -5,11 +5,11 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/metacubex/mihomo/adapter/outboundgroup"
-	"github.com/metacubex/mihomo/common/utils"
-	"github.com/metacubex/mihomo/component/profile/cachefile"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/tunnel"
+	"github.com/RomanovCaesar/cproxy/adapter/outboundgroup"
+	"github.com/RomanovCaesar/cproxy/common/utils"
+	"github.com/RomanovCaesar/cproxy/component/profile/cachefile"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/tunnel"
 
 	"github.com/metacubex/chi"
 	"github.com/metacubex/chi/render"

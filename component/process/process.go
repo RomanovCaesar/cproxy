@@ -4,7 +4,7 @@ import (
 	"errors"
 	"net/netip"
 
-	C "github.com/metacubex/mihomo/constant"
+	C "github.com/RomanovCaesar/cproxy/constant"
 )
 
 var (

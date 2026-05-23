@@ -5,12 +5,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/mihomo/common/lru"
-	"github.com/metacubex/mihomo/component/fakeip"
-	"github.com/metacubex/mihomo/component/resolver"
-	C "github.com/metacubex/mihomo/constant"
-	icontext "github.com/metacubex/mihomo/context"
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/common/lru"
+	"github.com/RomanovCaesar/cproxy/component/fakeip"
+	"github.com/RomanovCaesar/cproxy/component/resolver"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	icontext "github.com/RomanovCaesar/cproxy/context"
+	"github.com/RomanovCaesar/cproxy/log"
 
 	D "github.com/miekg/dns"
 )

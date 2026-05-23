@@ -4,8 +4,8 @@ import (
 	"context"
 	"net"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	"github.com/metacubex/mihomo/transport/socks5"
+	"github.com/RomanovCaesar/cproxy/adapter/inbound"
+	"github.com/RomanovCaesar/cproxy/transport/socks5"
 )
 
 // HandleSocket like inbound.NewSocket combine with Tunnel.HandleTCPConn but also handel specialFqdn

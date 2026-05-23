@@ -4,7 +4,7 @@ import (
 	"net"
 	"net/netip"
 
-	"github.com/metacubex/mihomo/component/iface"
+	"github.com/RomanovCaesar/cproxy/component/iface"
 
 	"github.com/metacubex/sing/common/control"
 )

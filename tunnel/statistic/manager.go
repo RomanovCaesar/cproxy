@@ -4,9 +4,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/metacubex/mihomo/common/atomic"
-	"github.com/metacubex/mihomo/common/xsync"
-	"github.com/metacubex/mihomo/component/memory"
+	"github.com/RomanovCaesar/cproxy/common/atomic"
+	"github.com/RomanovCaesar/cproxy/common/xsync"
+	"github.com/RomanovCaesar/cproxy/component/memory"
 )
 
 var DefaultManager *Manager

@@ -3,8 +3,8 @@ package fakeip
 import (
 	"testing"
 
-	"github.com/metacubex/mihomo/component/trie"
-	C "github.com/metacubex/mihomo/constant"
+	"github.com/RomanovCaesar/cproxy/component/trie"
+	C "github.com/RomanovCaesar/cproxy/constant"
 
 	"github.com/stretchr/testify/assert"
 )

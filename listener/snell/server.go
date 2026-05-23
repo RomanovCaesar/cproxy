@@ -12,13 +12,13 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/common/utils"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/transport/shadowsocks/shadowaead"
-	obfs "github.com/metacubex/mihomo/transport/simple-obfs"
-	"github.com/metacubex/mihomo/transport/snell"
+	"github.com/RomanovCaesar/cproxy/adapter/inbound"
+	N "github.com/RomanovCaesar/cproxy/common/net"
+	"github.com/RomanovCaesar/cproxy/common/utils"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/transport/shadowsocks/shadowaead"
+	obfs "github.com/RomanovCaesar/cproxy/transport/simple-obfs"
+	"github.com/RomanovCaesar/cproxy/transport/snell"
 )
 
 const maxPacketLength = 0x3fff

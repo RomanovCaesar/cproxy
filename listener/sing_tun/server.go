@@ -13,15 +13,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	"github.com/metacubex/mihomo/component/dialer"
-	"github.com/metacubex/mihomo/component/iface"
-	"github.com/metacubex/mihomo/component/resolver"
-	C "github.com/metacubex/mihomo/constant"
-	P "github.com/metacubex/mihomo/constant/provider"
-	LC "github.com/metacubex/mihomo/listener/config"
-	"github.com/metacubex/mihomo/listener/sing"
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/adapter/inbound"
+	"github.com/RomanovCaesar/cproxy/component/dialer"
+	"github.com/RomanovCaesar/cproxy/component/iface"
+	"github.com/RomanovCaesar/cproxy/component/resolver"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	P "github.com/RomanovCaesar/cproxy/constant/provider"
+	LC "github.com/RomanovCaesar/cproxy/listener/config"
+	"github.com/RomanovCaesar/cproxy/listener/sing"
+	"github.com/RomanovCaesar/cproxy/log"
 	"golang.org/x/exp/constraints"
 
 	tun "github.com/metacubex/sing-tun"
@@ -429,7 +429,7 @@ func New(options LC.Tun, tunnel C.Tunnel, additions ...inbound.Addition) (l *Lis
 			Logger:                 log.SingLogger,
 			NetworkMonitor:         l.networkUpdateMonitor,
 			InterfaceFinder:        interfaceFinder,
-			TableName:              "mihomo",
+			TableName:              "cproxy",
 			DisableNFTables:        dErr == nil && disableNFTables,
 			RouteAddressSet:        &l.routeAddressSet,
 			RouteExcludeAddressSet: &l.routeExcludeAddressSet,

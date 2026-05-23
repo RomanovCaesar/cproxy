@@ -6,8 +6,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/metacubex/mihomo/component/resolver"
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/component/resolver"
+	"github.com/RomanovCaesar/cproxy/log"
 
 	"golang.org/x/exp/slices"
 )

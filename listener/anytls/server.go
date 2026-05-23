@@ -9,16 +9,16 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	"github.com/metacubex/mihomo/common/buf"
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/component/ech"
-	C "github.com/metacubex/mihomo/constant"
-	LC "github.com/metacubex/mihomo/listener/config"
-	"github.com/metacubex/mihomo/listener/sing"
-	"github.com/metacubex/mihomo/ntp"
-	"github.com/metacubex/mihomo/transport/anytls/padding"
-	"github.com/metacubex/mihomo/transport/anytls/session"
+	"github.com/RomanovCaesar/cproxy/adapter/inbound"
+	"github.com/RomanovCaesar/cproxy/common/buf"
+	"github.com/RomanovCaesar/cproxy/component/ca"
+	"github.com/RomanovCaesar/cproxy/component/ech"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	LC "github.com/RomanovCaesar/cproxy/listener/config"
+	"github.com/RomanovCaesar/cproxy/listener/sing"
+	"github.com/RomanovCaesar/cproxy/ntp"
+	"github.com/RomanovCaesar/cproxy/transport/anytls/padding"
+	"github.com/RomanovCaesar/cproxy/transport/anytls/session"
 
 	"github.com/metacubex/sing/common/auth"
 	"github.com/metacubex/sing/common/bufio"
@@ -201,7 +201,7 @@ func (l *Listener) HandleConn(conn net.Conn, h *sing.ListenerHandler) {
 			return
 		}
 
-		// It seems that mihomo does not implement a connection error reporting mechanism, so we report success directly.
+		// It seems that cproxy does not implement a connection error reporting mechanism, so we report success directly.
 		err = stream.HandshakeSuccess()
 		if err != nil {
 			return

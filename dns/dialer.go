@@ -2,7 +2,7 @@ package dns
 
 // export functions from tunnel module
 
-import "github.com/metacubex/mihomo/tunnel"
+import "github.com/RomanovCaesar/cproxy/tunnel"
 
 const RespectRules = tunnel.DnsRespectRules
 

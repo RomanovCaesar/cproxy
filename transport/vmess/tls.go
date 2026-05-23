@@ -5,9 +5,9 @@ import (
 	"errors"
 	"net"
 
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/component/ech"
-	tlsC "github.com/metacubex/mihomo/component/tls"
+	"github.com/RomanovCaesar/cproxy/component/ca"
+	"github.com/RomanovCaesar/cproxy/component/ech"
+	tlsC "github.com/RomanovCaesar/cproxy/component/tls"
 
 	"github.com/metacubex/tls"
 )

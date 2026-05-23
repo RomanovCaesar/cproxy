@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/metacubex/mihomo/listener/sing"
+	"github.com/RomanovCaesar/cproxy/listener/sing"
 
 	"encoding/json"
 )

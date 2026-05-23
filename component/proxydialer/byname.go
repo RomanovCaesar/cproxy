@@ -6,7 +6,7 @@ import (
 	"net"
 	"net/netip"
 
-	C "github.com/metacubex/mihomo/constant"
+	C "github.com/RomanovCaesar/cproxy/constant"
 )
 
 type Tunnel interface {

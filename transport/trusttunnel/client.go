@@ -11,11 +11,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/metacubex/mihomo/common/httputils"
-	"github.com/metacubex/mihomo/common/once"
-	"github.com/metacubex/mihomo/component/dialer"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/transport/vmess"
+	"github.com/RomanovCaesar/cproxy/common/httputils"
+	"github.com/RomanovCaesar/cproxy/common/once"
+	"github.com/RomanovCaesar/cproxy/component/dialer"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/transport/vmess"
 
 	"github.com/metacubex/http"
 	"golang.org/x/exp/slices"

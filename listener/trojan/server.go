@@ -7,21 +7,21 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/common/utils"
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/component/ech"
-	C "github.com/metacubex/mihomo/constant"
-	LC "github.com/metacubex/mihomo/listener/config"
-	"github.com/metacubex/mihomo/listener/reality"
-	"github.com/metacubex/mihomo/listener/sing"
-	"github.com/metacubex/mihomo/ntp"
-	"github.com/metacubex/mihomo/transport/gun"
-	"github.com/metacubex/mihomo/transport/shadowsocks/core"
-	"github.com/metacubex/mihomo/transport/socks5"
-	"github.com/metacubex/mihomo/transport/trojan"
-	mihomoVMess "github.com/metacubex/mihomo/transport/vmess"
+	"github.com/RomanovCaesar/cproxy/adapter/inbound"
+	N "github.com/RomanovCaesar/cproxy/common/net"
+	"github.com/RomanovCaesar/cproxy/common/utils"
+	"github.com/RomanovCaesar/cproxy/component/ca"
+	"github.com/RomanovCaesar/cproxy/component/ech"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	LC "github.com/RomanovCaesar/cproxy/listener/config"
+	"github.com/RomanovCaesar/cproxy/listener/reality"
+	"github.com/RomanovCaesar/cproxy/listener/sing"
+	"github.com/RomanovCaesar/cproxy/ntp"
+	"github.com/RomanovCaesar/cproxy/transport/gun"
+	"github.com/RomanovCaesar/cproxy/transport/shadowsocks/core"
+	"github.com/RomanovCaesar/cproxy/transport/socks5"
+	"github.com/RomanovCaesar/cproxy/transport/trojan"
+	cproxyVMess "github.com/RomanovCaesar/cproxy/transport/vmess"
 
 	"github.com/metacubex/http"
 	"github.com/metacubex/smux"
@@ -125,7 +125,7 @@ func New(config LC.TrojanServer, tunnel C.Tunnel, additions ...inbound.Addition)
 	if config.WsPath != "" {
 		httpMux := http.NewServeMux()
 		httpMux.HandleFunc(config.WsPath, func(w http.ResponseWriter, r *http.Request) {
-			conn, err := mihomoVMess.StreamUpgradedWebsocketConn(w, r)
+			conn, err := cproxyVMess.StreamUpgradedWebsocketConn(w, r)
 			if err != nil {
 				http.Error(w, err.Error(), 500)
 				return

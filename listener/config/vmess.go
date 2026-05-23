@@ -3,8 +3,8 @@ package config
 import (
 	"encoding/json"
 
-	"github.com/metacubex/mihomo/listener/reality"
-	"github.com/metacubex/mihomo/listener/sing"
+	"github.com/RomanovCaesar/cproxy/listener/reality"
+	"github.com/RomanovCaesar/cproxy/listener/sing"
 )
 
 type VmessUser struct {

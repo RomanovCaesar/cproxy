@@ -7,8 +7,8 @@ import (
 	"runtime"
 	"syscall"
 
-	"github.com/metacubex/mihomo/hub/executor"
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/hub/executor"
+	"github.com/RomanovCaesar/cproxy/log"
 
 	"github.com/metacubex/chi"
 	"github.com/metacubex/chi/render"

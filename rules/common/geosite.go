@@ -3,12 +3,12 @@ package common
 import (
 	"fmt"
 
-	"github.com/metacubex/mihomo/component/geodata"
-	_ "github.com/metacubex/mihomo/component/geodata/memconservative"
-	"github.com/metacubex/mihomo/component/geodata/router"
-	_ "github.com/metacubex/mihomo/component/geodata/standard"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/component/geodata"
+	_ "github.com/RomanovCaesar/cproxy/component/geodata/memconservative"
+	"github.com/RomanovCaesar/cproxy/component/geodata/router"
+	_ "github.com/RomanovCaesar/cproxy/component/geodata/standard"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/log"
 )
 
 type GEOSITE struct {

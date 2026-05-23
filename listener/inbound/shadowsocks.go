@@ -3,10 +3,10 @@ package inbound
 import (
 	"strings"
 
-	C "github.com/metacubex/mihomo/constant"
-	LC "github.com/metacubex/mihomo/listener/config"
-	"github.com/metacubex/mihomo/listener/sing_shadowsocks"
-	"github.com/metacubex/mihomo/log"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	LC "github.com/RomanovCaesar/cproxy/listener/config"
+	"github.com/RomanovCaesar/cproxy/listener/sing_shadowsocks"
+	"github.com/RomanovCaesar/cproxy/log"
 )
 
 type ShadowSocksOption struct {

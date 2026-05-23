@@ -5,9 +5,9 @@ import (
 	"net/netip"
 	"time"
 
-	"github.com/metacubex/mihomo/component/dialer"
-	"github.com/metacubex/mihomo/component/resolver"
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/component/dialer"
+	"github.com/RomanovCaesar/cproxy/component/resolver"
+	"github.com/RomanovCaesar/cproxy/log"
 
 	tun "github.com/metacubex/sing-tun"
 	"github.com/metacubex/sing-tun/ping"

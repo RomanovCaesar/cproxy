@@ -5,9 +5,9 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/metacubex/mihomo/adapter/outbound"
-	"github.com/metacubex/mihomo/listener/inbound"
-	"github.com/metacubex/mihomo/transport/sudoku"
+	"github.com/RomanovCaesar/cproxy/adapter/outbound"
+	"github.com/RomanovCaesar/cproxy/listener/inbound"
+	"github.com/RomanovCaesar/cproxy/transport/sudoku"
 	"github.com/stretchr/testify/assert"
 )
 

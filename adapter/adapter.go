@@ -9,13 +9,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/mihomo/common/atomic"
-	"github.com/metacubex/mihomo/common/queue"
-	"github.com/metacubex/mihomo/common/utils"
-	"github.com/metacubex/mihomo/common/xsync"
-	"github.com/metacubex/mihomo/component/ca"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/common/atomic"
+	"github.com/RomanovCaesar/cproxy/common/queue"
+	"github.com/RomanovCaesar/cproxy/common/utils"
+	"github.com/RomanovCaesar/cproxy/common/xsync"
+	"github.com/RomanovCaesar/cproxy/component/ca"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/log"
 
 	"github.com/metacubex/http"
 )

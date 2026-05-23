@@ -5,8 +5,8 @@ import (
 	"net"
 	"net/netip"
 
-	"github.com/metacubex/mihomo/common/atomic"
-	"github.com/metacubex/mihomo/component/resolver"
+	"github.com/RomanovCaesar/cproxy/common/atomic"
+	"github.com/RomanovCaesar/cproxy/component/resolver"
 )
 
 var (

@@ -9,8 +9,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/metacubex/mihomo/transport/hysteria/obfs"
-	"github.com/metacubex/mihomo/transport/hysteria/utils"
+	"github.com/RomanovCaesar/cproxy/transport/hysteria/obfs"
+	"github.com/RomanovCaesar/cproxy/transport/hysteria/utils"
 
 	"github.com/metacubex/randv2"
 )

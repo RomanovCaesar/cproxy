@@ -3,7 +3,7 @@
 package dns
 
 import (
-	"github.com/metacubex/mihomo/component/resolver"
+	"github.com/RomanovCaesar/cproxy/component/resolver"
 )
 
 var systemResolver []dnsClient

@@ -14,21 +14,21 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/component/ca"
-	mihomoHttp "github.com/metacubex/mihomo/component/http"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/constant/features"
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/component/ca"
+	cproxyHttp "github.com/RomanovCaesar/cproxy/component/http"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/constant/features"
+	"github.com/RomanovCaesar/cproxy/log"
 
 	"github.com/metacubex/http"
 )
 
 const (
-	baseReleaseURL    = "https://github.com/MetaCubeX/mihomo/releases/latest/download/"
-	versionReleaseURL = "https://github.com/MetaCubeX/mihomo/releases/latest/download/version.txt"
+	baseReleaseURL    = "https://github.com/RomanovCaesar/cproxy/releases/latest/download/"
+	versionReleaseURL = "https://github.com/RomanovCaesar/cproxy/releases/latest/download/version.txt"
 
-	baseAlphaURL    = "https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/"
-	versionAlphaURL = "https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/version.txt"
+	baseAlphaURL    = "https://github.com/RomanovCaesar/cproxy/releases/download/Prerelease-Alpha/"
+	versionAlphaURL = "https://github.com/RomanovCaesar/cproxy/releases/download/Prerelease-Alpha/version.txt"
 
 	// MaxPackageFileSize is a maximum package file length in bytes. The largest
 	// package whose size is limited by this constant currently has the size of
@@ -41,7 +41,7 @@ const (
 	AlphaChannel   = "alpha"
 )
 
-// CoreUpdater is the mihomo updater.
+// CoreUpdater is the cproxy updater.
 // modify from https://github.com/AdguardTeam/AdGuardHome/blob/595484e0b3fb4c457f9bb727a6b94faa78a66c5f/internal/updater/updater.go
 type CoreUpdater struct {
 	mu sync.Mutex
@@ -52,28 +52,28 @@ var DefaultCoreUpdater = CoreUpdater{}
 func (u *CoreUpdater) CoreBaseName() string {
 	switch runtime.GOARCH {
 	case "arm":
-		// mihomo-linux-armv5
-		return fmt.Sprintf("mihomo-%s-%sv%s", runtime.GOOS, runtime.GOARCH, features.GOARM)
+		// cproxy-linux-armv5
+		return fmt.Sprintf("cproxy-%s-%sv%s", runtime.GOOS, runtime.GOARCH, features.GOARM)
 	case "arm64":
 		if runtime.GOOS == "android" {
-			// mihomo-android-arm64-v8
-			return fmt.Sprintf("mihomo-%s-%s-v8", runtime.GOOS, runtime.GOARCH)
+			// cproxy-android-arm64-v8
+			return fmt.Sprintf("cproxy-%s-%s-v8", runtime.GOOS, runtime.GOARCH)
 		} else {
-			// mihomo-linux-arm64
-			return fmt.Sprintf("mihomo-%s-%s", runtime.GOOS, runtime.GOARCH)
+			// cproxy-linux-arm64
+			return fmt.Sprintf("cproxy-%s-%s", runtime.GOOS, runtime.GOARCH)
 		}
 	case "mips", "mipsle":
-		// mihomo-linux-mips-hardfloat
-		return fmt.Sprintf("mihomo-%s-%s-%s", runtime.GOOS, runtime.GOARCH, features.GOMIPS)
+		// cproxy-linux-mips-hardfloat
+		return fmt.Sprintf("cproxy-%s-%s-%s", runtime.GOOS, runtime.GOARCH, features.GOMIPS)
 	case "amd64":
-		// mihomo-linux-amd64-v1
-		return fmt.Sprintf("mihomo-%s-%s-%s", runtime.GOOS, runtime.GOARCH, features.GOAMD64)
+		// cproxy-linux-amd64-v1
+		return fmt.Sprintf("cproxy-%s-%s-%s", runtime.GOOS, runtime.GOARCH, features.GOAMD64)
 	default:
-		// mihomo-linux-386
-		// mihomo-linux-mips64
-		// mihomo-linux-riscv64
-		// mihomo-linux-s390x
-		return fmt.Sprintf("mihomo-%s-%s", runtime.GOOS, runtime.GOARCH)
+		// cproxy-linux-386
+		// cproxy-linux-mips64
+		// cproxy-linux-riscv64
+		// cproxy-linux-s390x
+		return fmt.Sprintf("cproxy-%s-%s", runtime.GOOS, runtime.GOARCH)
 	}
 }
 
@@ -121,8 +121,8 @@ func (u *CoreUpdater) Update(currentExePath string, channel string, force bool) 
 	}()
 
 	// ---- prepare ----
-	mihomoBaseName := u.CoreBaseName()
-	packageName := mihomoBaseName + "-" + latestVersion
+	cproxyBaseName := u.CoreBaseName()
+	packageName := cproxyBaseName + "-" + latestVersion
 	if runtime.GOOS == "windows" {
 		packageName = packageName + ".zip"
 	} else {
@@ -137,7 +137,7 @@ func (u *CoreUpdater) Update(currentExePath string, channel string, force bool) 
 	packagePath := filepath.Join(updateDir, packageName)
 	//log.Infoln(packagePath)
 
-	updateExeName := mihomoBaseName
+	updateExeName := cproxyBaseName
 	if runtime.GOOS == "windows" {
 		updateExeName = updateExeName + ".exe"
 	}
@@ -173,7 +173,7 @@ func (u *CoreUpdater) Update(currentExePath string, channel string, force bool) 
 func (u *CoreUpdater) getLatestVersion(versionURL string) (version string, err error) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*5)
 	defer cancel()
-	resp, err := mihomoHttp.HttpRequest(ctx, versionURL, http.MethodGet, nil, nil, mihomoHttp.WithCAOption(ca.Option{ZeroTrust: true}))
+	resp, err := cproxyHttp.HttpRequest(ctx, versionURL, http.MethodGet, nil, nil, cproxyHttp.WithCAOption(ca.Option{ZeroTrust: true}))
 	if err != nil {
 		return "", err
 	}
@@ -196,7 +196,7 @@ func (u *CoreUpdater) getLatestVersion(versionURL string) (version string, err e
 func (u *CoreUpdater) download(updateDir, packagePath, packageURL string) (err error) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*90)
 	defer cancel()
-	resp, err := mihomoHttp.HttpRequest(ctx, packageURL, http.MethodGet, nil, nil, mihomoHttp.WithCAOption(ca.Option{ZeroTrust: true}))
+	resp, err := cproxyHttp.HttpRequest(ctx, packageURL, http.MethodGet, nil, nil, cproxyHttp.WithCAOption(ca.Option{ZeroTrust: true}))
 	if err != nil {
 		return fmt.Errorf("http request failed: %w", err)
 	}

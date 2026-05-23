@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/metacubex/mihomo/component/resolver"
-	icontext "github.com/metacubex/mihomo/context"
+	"github.com/RomanovCaesar/cproxy/component/resolver"
+	icontext "github.com/RomanovCaesar/cproxy/context"
 	D "github.com/miekg/dns"
 )
 

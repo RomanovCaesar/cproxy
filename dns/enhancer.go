@@ -4,9 +4,9 @@ import (
 	"errors"
 	"net/netip"
 
-	"github.com/metacubex/mihomo/common/lru"
-	"github.com/metacubex/mihomo/component/fakeip"
-	C "github.com/metacubex/mihomo/constant"
+	"github.com/RomanovCaesar/cproxy/common/lru"
+	"github.com/RomanovCaesar/cproxy/component/fakeip"
+	C "github.com/RomanovCaesar/cproxy/constant"
 )
 
 type ResolverEnhancer struct {

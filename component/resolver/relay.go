@@ -7,7 +7,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/metacubex/mihomo/common/pool"
+	"github.com/RomanovCaesar/cproxy/common/pool"
 
 	D "github.com/miekg/dns"
 )

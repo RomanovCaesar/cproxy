@@ -1,10 +1,10 @@
 package hub
 
 import (
-	"github.com/metacubex/mihomo/config"
-	"github.com/metacubex/mihomo/hub/executor"
-	"github.com/metacubex/mihomo/hub/route"
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/config"
+	"github.com/RomanovCaesar/cproxy/hub/executor"
+	"github.com/RomanovCaesar/cproxy/hub/route"
+	"github.com/RomanovCaesar/cproxy/log"
 )
 
 type Option func(*config.Config)
@@ -69,7 +69,7 @@ func applyRoute(cfg *config.Config) {
 	})
 }
 
-// Parse call at the beginning of mihomo
+// Parse call at the beginning of cproxy
 func Parse(configBytes []byte, options ...Option) error {
 	var cfg *config.Config
 	var err error

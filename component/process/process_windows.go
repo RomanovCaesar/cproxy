@@ -7,7 +7,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/log"
 
 	"golang.org/x/sys/windows"
 )

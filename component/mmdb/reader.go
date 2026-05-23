@@ -5,7 +5,7 @@ import (
 	"net"
 	"strings"
 
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/log"
 	"github.com/oschwald/maxminddb-golang"
 )
 

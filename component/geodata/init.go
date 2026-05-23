@@ -8,11 +8,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/common/atomic"
-	mihomoHttp "github.com/metacubex/mihomo/component/http"
-	"github.com/metacubex/mihomo/component/mmdb"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/log"
+	"github.com/RomanovCaesar/cproxy/common/atomic"
+	cproxyHttp "github.com/RomanovCaesar/cproxy/component/http"
+	"github.com/RomanovCaesar/cproxy/component/mmdb"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/log"
 
 	"github.com/metacubex/http"
 )
@@ -71,7 +71,7 @@ func SetASNUrl(url string) {
 func downloadToPath(url string, path string) (err error) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*90)
 	defer cancel()
-	resp, err := mihomoHttp.HttpRequest(ctx, url, http.MethodGet, nil, nil)
+	resp, err := cproxyHttp.HttpRequest(ctx, url, http.MethodGet, nil, nil)
 	if err != nil {
 		return
 	}

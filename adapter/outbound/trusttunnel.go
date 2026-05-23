@@ -5,10 +5,10 @@ import (
 	"net"
 	"strconv"
 
-	N "github.com/metacubex/mihomo/common/net"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/transport/trusttunnel"
-	"github.com/metacubex/mihomo/transport/vmess"
+	N "github.com/RomanovCaesar/cproxy/common/net"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/transport/trusttunnel"
+	"github.com/RomanovCaesar/cproxy/transport/vmess"
 )
 
 type TrustTunnel struct {

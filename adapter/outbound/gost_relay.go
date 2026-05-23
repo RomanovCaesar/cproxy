@@ -6,8 +6,8 @@ import (
 	"net"
 	"strconv"
 
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/transport/gost"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/transport/gost"
 )
 
 type GostRelay struct {

@@ -11,36 +11,36 @@ import (
 	"time"
 	_ "unsafe"
 
-	"github.com/metacubex/mihomo/adapter"
-	"github.com/metacubex/mihomo/adapter/inbound"
-	"github.com/metacubex/mihomo/adapter/outboundgroup"
-	"github.com/metacubex/mihomo/component/auth"
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/component/dialer"
-	"github.com/metacubex/mihomo/component/geodata"
-	mihomoHttp "github.com/metacubex/mihomo/component/http"
-	"github.com/metacubex/mihomo/component/iface"
-	"github.com/metacubex/mihomo/component/keepalive"
-	"github.com/metacubex/mihomo/component/profile"
-	"github.com/metacubex/mihomo/component/profile/cachefile"
-	"github.com/metacubex/mihomo/component/resolver"
-	"github.com/metacubex/mihomo/component/resource"
-	"github.com/metacubex/mihomo/component/sniffer"
-	tlsC "github.com/metacubex/mihomo/component/tls"
-	"github.com/metacubex/mihomo/component/trie"
-	"github.com/metacubex/mihomo/component/updater"
-	"github.com/metacubex/mihomo/config"
-	C "github.com/metacubex/mihomo/constant"
-	P "github.com/metacubex/mihomo/constant/provider"
-	"github.com/metacubex/mihomo/dns"
-	"github.com/metacubex/mihomo/listener"
-	authStore "github.com/metacubex/mihomo/listener/auth"
-	LC "github.com/metacubex/mihomo/listener/config"
-	"github.com/metacubex/mihomo/listener/inner"
-	"github.com/metacubex/mihomo/listener/tproxy"
-	"github.com/metacubex/mihomo/log"
-	"github.com/metacubex/mihomo/ntp/ntp"
-	"github.com/metacubex/mihomo/tunnel"
+	"github.com/RomanovCaesar/cproxy/adapter"
+	"github.com/RomanovCaesar/cproxy/adapter/inbound"
+	"github.com/RomanovCaesar/cproxy/adapter/outboundgroup"
+	"github.com/RomanovCaesar/cproxy/component/auth"
+	"github.com/RomanovCaesar/cproxy/component/ca"
+	"github.com/RomanovCaesar/cproxy/component/dialer"
+	"github.com/RomanovCaesar/cproxy/component/geodata"
+	cproxyHttp "github.com/RomanovCaesar/cproxy/component/http"
+	"github.com/RomanovCaesar/cproxy/component/iface"
+	"github.com/RomanovCaesar/cproxy/component/keepalive"
+	"github.com/RomanovCaesar/cproxy/component/profile"
+	"github.com/RomanovCaesar/cproxy/component/profile/cachefile"
+	"github.com/RomanovCaesar/cproxy/component/resolver"
+	"github.com/RomanovCaesar/cproxy/component/resource"
+	"github.com/RomanovCaesar/cproxy/component/sniffer"
+	tlsC "github.com/RomanovCaesar/cproxy/component/tls"
+	"github.com/RomanovCaesar/cproxy/component/trie"
+	"github.com/RomanovCaesar/cproxy/component/updater"
+	"github.com/RomanovCaesar/cproxy/config"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	P "github.com/RomanovCaesar/cproxy/constant/provider"
+	"github.com/RomanovCaesar/cproxy/dns"
+	"github.com/RomanovCaesar/cproxy/listener"
+	authStore "github.com/RomanovCaesar/cproxy/listener/auth"
+	LC "github.com/RomanovCaesar/cproxy/listener/config"
+	"github.com/RomanovCaesar/cproxy/listener/inner"
+	"github.com/RomanovCaesar/cproxy/listener/tproxy"
+	"github.com/RomanovCaesar/cproxy/log"
+	"github.com/RomanovCaesar/cproxy/ntp/ntp"
+	"github.com/RomanovCaesar/cproxy/tunnel"
 )
 
 var mux sync.Mutex
@@ -175,7 +175,7 @@ func GetGeneral() *config.General {
 		FindProcessMode:         tunnel.FindProcessMode(),
 		Sniffing:                tunnel.IsSniffing(),
 		GlobalClientFingerprint: tlsC.GetGlobalFingerprint(),
-		GlobalUA:                mihomoHttp.UA(),
+		GlobalUA:                cproxyHttp.UA(),
 		ETagSupport:             resource.ETag(),
 		KeepAliveInterval:       int(keepalive.KeepAliveInterval() / time.Second),
 		KeepAliveIdle:           int(keepalive.KeepAliveIdle() / time.Second),
@@ -380,7 +380,7 @@ func updateUpdater(cfg *config.Config) {
 	updater.DefaultUiUpdater.AutoDownloadUI()
 }
 
-//go:linkname temporaryUpdateGeneral github.com/metacubex/mihomo/config.temporaryUpdateGeneral
+//go:linkname temporaryUpdateGeneral github.com/RomanovCaesar/cproxy/config.temporaryUpdateGeneral
 func temporaryUpdateGeneral(general *config.General) func() {
 	oldGeneral := GetGeneral()
 	updateGeneral(general, false)
@@ -423,7 +423,7 @@ func updateGeneral(general *config.General, logging bool) {
 	geodata.SetGeoSiteUrl(general.GeoXUrl.GeoSite)
 	geodata.SetMmdbUrl(general.GeoXUrl.Mmdb)
 	geodata.SetASNUrl(general.GeoXUrl.ASN)
-	mihomoHttp.SetUA(general.GlobalUA)
+	cproxyHttp.SetUA(general.GlobalUA)
 	resource.SetETag(general.ETagSupport)
 
 	if general.GlobalClientFingerprint != "" {
@@ -538,5 +538,5 @@ func Shutdown() {
 	tproxy.CleanupTProxyIPTables()
 	resolver.StoreFakePoolState()
 
-	log.Warnln("Mihomo shutting down")
+	log.Warnln("CProxy shutting down")
 }

@@ -19,7 +19,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/metacubex/mihomo/component/ca"
+	"github.com/RomanovCaesar/cproxy/component/ca"
 
 	"github.com/metacubex/http"
 	"github.com/metacubex/http/httputil"

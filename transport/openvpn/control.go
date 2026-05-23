@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/common/pool"
+	"github.com/RomanovCaesar/cproxy/common/pool"
 )
 
 type PacketIO interface {

@@ -4,7 +4,7 @@ import (
 	"encoding/base64"
 	"testing"
 
-	"github.com/metacubex/mihomo/component/ech/echparser"
+	"github.com/RomanovCaesar/cproxy/component/ech/echparser"
 )
 
 func TestGenECHConfig(t *testing.T) {

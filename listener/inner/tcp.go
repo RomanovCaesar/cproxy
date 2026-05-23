@@ -4,8 +4,8 @@ import (
 	"errors"
 	"net"
 
-	N "github.com/metacubex/mihomo/common/net"
-	C "github.com/metacubex/mihomo/constant"
+	N "github.com/RomanovCaesar/cproxy/common/net"
+	C "github.com/RomanovCaesar/cproxy/constant"
 )
 
 var tunnel C.Tunnel
@@ -29,7 +29,7 @@ func HandleTcp(tunnel C.Tunnel, address string, proxy string) (conn net.Conn, er
 	metadata.NetWork = C.TCP
 	metadata.Type = C.INNER
 	metadata.DNSMode = C.DNSNormal
-	metadata.Process = C.MihomoName
+	metadata.Process = C.CProxyName
 	if proxy != "" {
 		metadata.SpecialProxy = proxy
 	}

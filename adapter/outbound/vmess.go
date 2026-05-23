@@ -9,15 +9,15 @@ import (
 	"strings"
 	"sync"
 
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/common/utils"
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/component/ech"
-	tlsC "github.com/metacubex/mihomo/component/tls"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/ntp"
-	"github.com/metacubex/mihomo/transport/gun"
-	mihomoVMess "github.com/metacubex/mihomo/transport/vmess"
+	N "github.com/RomanovCaesar/cproxy/common/net"
+	"github.com/RomanovCaesar/cproxy/common/utils"
+	"github.com/RomanovCaesar/cproxy/component/ca"
+	"github.com/RomanovCaesar/cproxy/component/ech"
+	tlsC "github.com/RomanovCaesar/cproxy/component/tls"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/ntp"
+	"github.com/RomanovCaesar/cproxy/transport/gun"
+	cproxyVMess "github.com/RomanovCaesar/cproxy/transport/vmess"
 
 	"github.com/metacubex/http"
 	vmess "github.com/metacubex/sing-vmess"
@@ -104,7 +104,7 @@ func (v *Vmess) StreamConnContext(ctx context.Context, c net.Conn, metadata *C.M
 	switch v.option.Network {
 	case "ws":
 		host, port, _ := net.SplitHostPort(v.addr)
-		wsOpts := &mihomoVMess.WebsocketConfig{
+		wsOpts := &cproxyVMess.WebsocketConfig{
 			Host:                     host,
 			Port:                     port,
 			Path:                     v.option.WSOpts.Path,
@@ -145,7 +145,7 @@ func (v *Vmess) StreamConnContext(ctx context.Context, c net.Conn, metadata *C.M
 				wsOpts.TLSConfig.ServerName = host
 			}
 		}
-		c, err = mihomoVMess.StreamWebsocketConn(ctx, c, wsOpts)
+		c, err = cproxyVMess.StreamWebsocketConn(ctx, c, wsOpts)
 	case "http":
 		// readability first, so just copy default TLS logic
 		c, err = v.streamTLSConn(ctx, c, false)
@@ -154,26 +154,26 @@ func (v *Vmess) StreamConnContext(ctx context.Context, c net.Conn, metadata *C.M
 		}
 
 		host, _, _ := net.SplitHostPort(v.addr)
-		httpOpts := &mihomoVMess.HTTPConfig{
+		httpOpts := &cproxyVMess.HTTPConfig{
 			Host:    host,
 			Method:  v.option.HTTPOpts.Method,
 			Path:    v.option.HTTPOpts.Path,
 			Headers: v.option.HTTPOpts.Headers,
 		}
 
-		c = mihomoVMess.StreamHTTPConn(c, httpOpts)
+		c = cproxyVMess.StreamHTTPConn(c, httpOpts)
 	case "h2":
 		c, err = v.streamTLSConn(ctx, c, true)
 		if err != nil {
 			return nil, err
 		}
 
-		h2Opts := &mihomoVMess.H2Config{
+		h2Opts := &cproxyVMess.H2Config{
 			Hosts: v.option.HTTP2Opts.Host,
 			Path:  v.option.HTTP2Opts.Path,
 		}
 
-		c, err = mihomoVMess.StreamH2Conn(ctx, c, h2Opts)
+		c, err = cproxyVMess.StreamH2Conn(ctx, c, h2Opts)
 	case "grpc":
 		break // already handle in dialContext
 	default:
@@ -248,7 +248,7 @@ func (v *Vmess) streamTLSConn(ctx context.Context, conn net.Conn, isH2 bool) (ne
 	if v.option.TLS {
 		host, _, _ := net.SplitHostPort(v.addr)
 
-		tlsOpts := mihomoVMess.TLSConfig{
+		tlsOpts := cproxyVMess.TLSConfig{
 			Host:              host,
 			SkipCertVerify:    v.option.SkipCertVerify,
 			FingerPrint:       v.option.Fingerprint,
@@ -268,7 +268,7 @@ func (v *Vmess) streamTLSConn(ctx context.Context, conn net.Conn, isH2 bool) (ne
 			tlsOpts.Host = v.option.ServerName
 		}
 
-		return mihomoVMess.StreamTLSConn(ctx, conn, &tlsOpts)
+		return cproxyVMess.StreamTLSConn(ctx, conn, &tlsOpts)
 	}
 
 	return conn, nil
@@ -425,9 +425,9 @@ func NewVmess(option VmessOption) (*Vmess, error) {
 		if option.ServerName == "" {
 			gunConfig.Host = v.addr
 		}
-		var tlsConfig *mihomoVMess.TLSConfig
+		var tlsConfig *cproxyVMess.TLSConfig
 		if option.TLS {
-			tlsConfig = &mihomoVMess.TLSConfig{
+			tlsConfig = &cproxyVMess.TLSConfig{
 				Host:              option.ServerName,
 				SkipCertVerify:    option.SkipCertVerify,
 				FingerPrint:       option.Fingerprint,

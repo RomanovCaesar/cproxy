@@ -15,8 +15,8 @@ import (
 	"sync"
 	"syscall"
 
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/log"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/log"
 )
 
 type UIUpdater struct {

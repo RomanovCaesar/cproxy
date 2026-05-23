@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/metacubex/mihomo/adapter/outbound"
-	"github.com/metacubex/mihomo/listener/inbound"
+	"github.com/RomanovCaesar/cproxy/adapter/outbound"
+	"github.com/RomanovCaesar/cproxy/listener/inbound"
 	"github.com/stretchr/testify/assert"
 )
 

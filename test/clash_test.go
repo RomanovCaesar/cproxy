@@ -16,13 +16,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/RomanovCaesar/cproxy/adapter/outbound"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/hub/executor"
+	"github.com/RomanovCaesar/cproxy/transport/socks5"
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/client"
 	"github.com/docker/go-connections/nat"
-	"github.com/metacubex/mihomo/adapter/outbound"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/hub/executor"
-	"github.com/metacubex/mihomo/transport/socks5"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -658,7 +658,7 @@ func benchmarkProxy(b *testing.B, proxy C.ProxyAdapter) {
 	})
 }
 
-func TestMihomo_Basic(t *testing.T) {
+func TestCProxy_Basic(t *testing.T) {
 	basic := `
 mixed-port: 10000
 log-level: silent

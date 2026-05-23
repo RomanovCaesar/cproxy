@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/listener/snell"
-	"github.com/metacubex/mihomo/log"
+	C "github.com/RomanovCaesar/cproxy/constant"
+	"github.com/RomanovCaesar/cproxy/listener/snell"
+	"github.com/RomanovCaesar/cproxy/log"
 )
 
 type SnellOption struct {

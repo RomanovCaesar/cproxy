@@ -1,7 +1,7 @@
 package common
 
 import (
-	C "github.com/metacubex/mihomo/constant"
+	C "github.com/RomanovCaesar/cproxy/constant"
 )
 
 type Match struct {
