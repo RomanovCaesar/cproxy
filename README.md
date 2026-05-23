@@ -1,9 +1,7 @@
 <h1 align="center">
-  <img src="Meta.png" alt="Meta Kennel" width="200">
-  <br>Meta Kernel<br>
+  <img src="CProxy-placeholder.png" alt="CProxy placeholder logo" width="200">
+  <br>CProxy Kernel<br>
 </h1>
-
-<h3 align="center">Another CProxy Kernel.</h3>
 
 <p align="center">
   <a href="https://goreportcard.com/report/github.com/RomanovCaesar/cproxy">
@@ -98,4 +96,4 @@ API.
 
 This software is released under the GPL-3.0 license.
 
-**In addition, any downstream projects not affiliated with `MetaCubeX` shall not contain the word `cproxy` in their names.**
+**In addition, any downstream projects not affiliated with `MetaCubeX` shall not contain the word `Mihomo` in their names. Therefore, this fork of Mihomo is renamed to CProxy.**
